@@ -8,7 +8,6 @@ public class Follow_player : MonoBehaviour {
 
     public Transform player;
     public float abs_X;
-
     public float abs_Y;
     private float cam_x;
     private float cam_y;
