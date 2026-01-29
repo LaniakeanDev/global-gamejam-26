@@ -88,7 +88,7 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.flipX = !isFacingRight;
     }
 
-   void FixedUpdate()
+    void FixedUpdate()
     {
         body.linearVelocity = movement * speed;
     }

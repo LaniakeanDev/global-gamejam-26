@@ -8,7 +8,9 @@ public class NPCController : MonoBehaviour
     public enum NPCState { Idle, Chasing }
     public NPCState state;
     private Vector2 wanderTarget;
-    private float wanderRadius;
+    private float wanderRadius = 500;
+    private float wanderTimer = 0f;
+    private const float WANDER_UPDATE_INTERVAL = 5f;
 
     public float conviction = 2f;
 
@@ -23,15 +25,30 @@ public class NPCController : MonoBehaviour
         if (conviction <= 0)
             state = NPCState.Idle;
         if (state == NPCState.Chasing && target != null)
+        {
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            spriteRenderer.flipX = transform.position.x - target.position.x > 0;
+        }
         else
         {
-            wanderTarget = (Vector2)transform.position + Random.insideUnitCircle * wanderRadius;
             transform.position = Vector2.MoveTowards(transform.position, wanderTarget, speed * 0.5f * Time.deltaTime);
+            spriteRenderer.flipX = transform.position.x - wanderTarget.x > 0;
         }
 
-        spriteRenderer.flipX = transform.position.x - target.position.x > 0;
     }
+
+
+    void FixedUpdate()
+    {
+        wanderTimer += Time.fixedDeltaTime;
+        
+        if (wanderTimer >= WANDER_UPDATE_INTERVAL)
+        {
+            wanderTarget = (Vector2)transform.position + Random.insideUnitCircle * wanderRadius;
+            wanderTimer = 0f; // Reset timer
+        }
+    }
+
 
     public void addConviction(float convictionDelta)
     {
