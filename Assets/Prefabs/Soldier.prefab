@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 3089576477879025706}
   - component: {fileID: 3456667027156035795}
   - component: {fileID: 9021273190502694711}
+  - component: {fileID: -514862043610459999}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Player
@@ -124,7 +125,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1246566015631380770}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 34824e14ce9ba1eb7a24d96ec9a9c8a7, type: 3}
   m_Name: 
@@ -207,3 +208,23 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.12895203, y: 0.19265684}
   m_EdgeRadius: 0
+--- !u!114 &-514862043610459999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1246566015631380770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462fb9b8a84c323c6951f8bf61242064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  SPEED: 5
+  canMoveDiagonally: 1
+  conviction: 4
+  score: 0
+  moveAction: {fileID: 0}
+  spriteRenderer: {fileID: 8022007123327510896}
+  anim: {fileID: 6220018832684364534}
+  collectedMasks: 0
