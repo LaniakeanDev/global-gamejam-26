@@ -6,7 +6,7 @@ public class NPCController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float speed;
     public enum NPCState { Idle, Chasing }
-    public NPCState state;
+    private NPCState state = NPCState.Chasing;
     private Vector2 wanderTarget;
     private float wanderRadius = 500;
     private float wanderTimer = 0f;
