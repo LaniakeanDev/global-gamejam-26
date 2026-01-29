@@ -15,7 +15,6 @@ public class UIDisplay : MonoBehaviour
 
     private UIDocument uiDocument;
 
-    // private PlayerController playerController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

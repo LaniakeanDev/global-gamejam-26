@@ -46,7 +46,6 @@ public class PlayerController : MonoBehaviour
         // Prevent the player from rotating
         body.constraints = RigidbodyConstraints2D.FreezeRotation;
         spriteRenderer = GetComponent<SpriteRenderer>();
-        // Debug.Log("conviction= " + conviction );
         animator = GetComponent<Animator>();
     }
 
@@ -68,7 +67,6 @@ public class PlayerController : MonoBehaviour
                     isFacingRight = true;
                 else if (horizontalInput < 0)
                     isFacingRight = false;
-            // Optionally rotate the player based on movement direction
         }
         else if (!IsDead)
         {
@@ -128,7 +126,6 @@ public class PlayerController : MonoBehaviour
     {
         NPCController npc = other.GetComponent<NPCController>();
         contactTimer += Time.deltaTime;
-        // Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
         if (npc && conviction <= npc.conviction)
         {
             

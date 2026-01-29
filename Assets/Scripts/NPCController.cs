@@ -11,7 +11,6 @@ public class NPCController : MonoBehaviour
     private float wanderRadius = 500;
     private float wanderTimer = 0f;
     private const float WANDER_UPDATE_INTERVAL = 5f;
-    // private float INITIAL_CONVICTION = 5f;
 
     public float conviction = 5f;
 
@@ -22,7 +21,6 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Debug.Log("NPC conviction: " + conviction);
         if (conviction <= 0)
         {
             state = NPCState.Idle;
@@ -52,10 +50,4 @@ public class NPCController : MonoBehaviour
             wanderTimer = 0f; // Reset timer
         }
     }
-
-
-    // public void addConviction(float convictionDelta)
-    // {
-    //     conviction += convictionDelta;
-    // }
 }
