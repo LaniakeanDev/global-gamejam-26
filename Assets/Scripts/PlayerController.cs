@@ -5,11 +5,13 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     // Public variables
-    public float speed = 5f; // The speed at which the player moves
+    public float SPEED = 5f; // The SPEED at which the player moves
     public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
 
-    public float conviction = 1f;
+    public float conviction = 4f;
     private float contactTimer;
+    private float CONTACT_TIMER_FREQ = 0.5f;
+    private float CONVICTION_GAIN = 0.5f;
     
     public InputActionReference moveAction;
     // Private variables 
@@ -21,6 +23,17 @@ public class PlayerController : MonoBehaviour
 
     public Animator anim;
     private bool isFacingRight = true;
+    private Animator animator;
+    private bool IsDead
+    {
+        get
+        {
+            if (animator == null) return false;
+            return animator.GetCurrentAnimatorStateInfo(0).IsName("die");
+        }
+    }
+
+
     private void OnEnable()
     {
         moveAction.action.Enable();
@@ -33,6 +46,8 @@ public class PlayerController : MonoBehaviour
         // Prevent the player from rotating
         body.constraints = RigidbodyConstraints2D.FreezeRotation;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        // Debug.Log("conviction= " + conviction );
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -45,7 +60,7 @@ public class PlayerController : MonoBehaviour
         float verticalInput = moveInput.y;
 
         // Check if diagonal movement is allowed
-        if (canMoveDiagonally)
+        if (canMoveDiagonally && !IsDead)
         {
             // Set movement direction based on input
             movement = new Vector2(horizontalInput, verticalInput);
@@ -55,7 +70,7 @@ public class PlayerController : MonoBehaviour
                     isFacingRight = false;
             // Optionally rotate the player based on movement direction
         }
-        else
+        else if (!IsDead)
         {
             // Determine the priority of movement based on input
             if (horizontalInput != 0)
@@ -86,37 +101,51 @@ public class PlayerController : MonoBehaviour
         spriteRenderer.flipX = !isFacingRight;
     }
 
-   void FixedUpdate()
+    void FixedUpdate()
     {
-        body.linearVelocity = movement * speed;
+        body.linearVelocity = movement * SPEED;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         NPCController npc = other.GetComponent<NPCController>();
-        if (npc && conviction < npc.conviction)
+        Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
+        if (npc && conviction <= npc.conviction)
         {
             anim.SetBool("isHurt", true);
             conviction -= 1;
-            Debug.Log("conviction: " + conviction);
             contactTimer = 0f; // Reset timer on initial contact
+        }
+        else if (npc && npc.conviction > 0 && conviction > npc.conviction)
+        {
+            npc.conviction -= 1;
+            contactTimer = 0f;
+            conviction += CONVICTION_GAIN;
         }
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
         NPCController npc = other.GetComponent<NPCController>();
-        if (npc && conviction < npc.conviction)
+        contactTimer += Time.deltaTime;
+        // Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
+        if (npc && conviction <= npc.conviction)
         {
-            contactTimer += Time.deltaTime;
             
-            if (contactTimer >= 0.5f)
+            if (contactTimer >= CONTACT_TIMER_FREQ)
             {
                 // Apply continuous damage/effect
-                conviction -= 1;
-                Debug.Log("Sustained damage! conviction: " + conviction);
-                
+                conviction -= 1;                
                 contactTimer = 0f; // Reset for next interval
+            }
+        }
+        else if (npc && npc.conviction > 0 && conviction > npc.conviction)
+        {
+            if (contactTimer >= 0.5f)
+            {
+                contactTimer = 0f;
+                npc.conviction -= 1;
+                conviction += CONVICTION_GAIN;
             }
         }
     }
@@ -134,4 +163,5 @@ public class PlayerController : MonoBehaviour
     {
         moveAction.action.Disable();
     }
+
 }
