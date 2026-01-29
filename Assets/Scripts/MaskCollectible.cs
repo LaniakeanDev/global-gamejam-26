@@ -1,6 +1,5 @@
 using UnityEngine;
 
-// Separate script for the mask collectible
 public class MaskCollectible : MonoBehaviour
 {
     public System.Action OnCollected;
@@ -10,6 +9,14 @@ public class MaskCollectible : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             OnCollected?.Invoke();
+            
+            PlayerController player = other.GetComponent<PlayerController>();
+            if (player != null)
+            {
+                player.maskScoreIncrease();
+                player.collectedMasks++;
+            }
+            
             Destroy(gameObject);
         }
     }
