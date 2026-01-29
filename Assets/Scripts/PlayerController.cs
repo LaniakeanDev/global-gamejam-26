@@ -12,6 +12,11 @@ public class PlayerController : MonoBehaviour
     private float contactTimer;
     private float CONTACT_TIMER_FREQ = 0.5f;
     private float CONVICTION_GAIN = 0.5f;
+
+    private float CONVERSION_SCORE_GAIN = 0.1f;
+    private float MASK_SCORE_GAIN = 10f;
+
+    public float score = 0f;
     
     public InputActionReference moveAction;
     // Private variables 
@@ -32,6 +37,8 @@ public class PlayerController : MonoBehaviour
             return animator.GetCurrentAnimatorStateInfo(0).IsName("die");
         }
     }
+
+    public int collectedMasks;
 
 
     private void OnEnable()
@@ -109,7 +116,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         NPCController npc = other.GetComponent<NPCController>();
-        Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
+        // Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
         if (npc && conviction <= npc.conviction)
         {
             anim.SetBool("isHurt", true);
@@ -121,6 +128,7 @@ public class PlayerController : MonoBehaviour
             npc.conviction -= 1;
             contactTimer = 0f;
             conviction += CONVICTION_GAIN;
+            score += CONVERSION_SCORE_GAIN;
         }
     }
 
@@ -146,8 +154,14 @@ public class PlayerController : MonoBehaviour
                 contactTimer = 0f;
                 npc.conviction -= 1;
                 conviction += CONVICTION_GAIN;
+                score += CONVERSION_SCORE_GAIN;
             }
         }
+    }
+
+    public void maskScoreIncrease()
+    {
+        score += MASK_SCORE_GAIN;
     }
 
     void OnTriggerExit2D(Collider2D other)

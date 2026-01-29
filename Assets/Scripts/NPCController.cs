@@ -22,7 +22,6 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Debug.Log("NPC conviction: " + conviction);
         if (conviction <= 0)
         {
             state = NPCState.Idle;
