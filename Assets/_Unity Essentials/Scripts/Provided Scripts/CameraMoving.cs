@@ -7,26 +7,30 @@ using UnityEngine;
 public class Follow_player : MonoBehaviour {
 
     public Transform player;
-    public float abs_X;
-    public float abs_Y;
+    public SpriteRenderer map; 
+    private Camera cam;
+    private float abs_X;
+    private float abs_Y;
     private float cam_x;
     private float cam_y;
 
-    // Update is called once per frame
-    void Update () {
-        if (player.transform.position.x > abs_X)
-            cam_x = abs_X - player.transform.position.x;
-        else if (player.transform.position.x < -abs_X)
-            cam_x = -abs_X - player.transform.position.x;
-        else
-            cam_x = 0;
-        if (player.transform.position.y > abs_Y)
-            cam_y = abs_Y - player.transform.position.y;
-        else if (player.transform.position.y < -abs_Y)
-            cam_y = -abs_Y - player.transform.position.y;
-        else
-            cam_y = 0;
-        transform.position = player.transform.position + new Vector3(cam_x, cam_y, -10);
+    void Start() {
+        cam = GetComponent<Camera>();
+        
+        // Taille de la caméra (important !)
+        float camVert = cam.orthographicSize;
+        float camHoriz = cam.aspect * camVert;
+        
+        // Limites map - taille caméra
+        abs_X = map.bounds.extents.x - camHoriz;
+        abs_Y = map.bounds.extents.y - camVert;
+        
+        Debug.Log($"Limites caméra: X={abs_X}, Y={abs_Y}");
+    }
 
+    void Update() {
+        cam_x = Mathf.Clamp(player.position.x, -abs_X, abs_X);
+        cam_y = Mathf.Clamp(player.position.y, -abs_Y, abs_Y);
+        transform.position = new Vector3(cam_x, cam_y, -10);
     }
 }
