@@ -210,6 +210,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 609605829}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &137275331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1515ab76e54f068e2f2207940fab32, type: 3}
+  m_Name: Player/Move
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.InputActionReference
+  m_Asset: {fileID: -944628639613478452, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
+  m_ActionId: 6bc1aaf4-b110-4ff7-891e-5b9fe6f32c4d
 --- !u!1 &467139564
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,9 +631,9 @@ GameObject:
   - component: {fileID: 852114160}
   - component: {fileID: 852114159}
   - component: {fileID: 852114158}
-  - component: {fileID: 852114157}
   - component: {fileID: 852114161}
   - component: {fileID: 852114162}
+  - component: {fileID: 852114163}
   m_Layer: 0
   m_Name: Orc-Walk_7
   m_TagString: Enemy
@@ -627,20 +641,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &852114157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 852114156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c73b2438aeab3756dad0f9fd27838548, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MoveTowardPlayer
-  target: {fileID: 1870048061}
-  speed: 2
 --- !u!95 &852114158
 Animator:
   serializedVersion: 7
@@ -810,6 +810,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &852114163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852114156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd1f318ba8cbc8c1f8c6bce01315cd34, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::NPCController
+  target: {fileID: 1870048061}
+  speed: 2
+  state: 0
+  conviction: 2
 --- !u!1 &1176127680
 GameObject:
   m_ObjectHideFlags: 0
@@ -1250,9 +1266,9 @@ GameObject:
   - component: {fileID: 1870048061}
   - component: {fileID: 1870048060}
   - component: {fileID: 1870048059}
-  - component: {fileID: 1870048062}
   - component: {fileID: 1870048063}
   - component: {fileID: 1870048064}
+  - component: {fileID: 1870048065}
   m_Layer: 0
   m_Name: Soldier
   m_TagString: Player
@@ -1356,23 +1372,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1870048062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1870048058}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34824e14ce9ba1eb7a24d96ec9a9c8a7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerIdle
-  speed: 5
-  canMoveDiagonally: 1
-  moveAction: {fileID: -3552364970006637457, guid: 4419d82f33d36e848b3ed5af4c8da37e, type: 3}
-  spriteRenderer: {fileID: 1870048060}
-  anim: {fileID: 1870048059}
 --- !u!50 &1870048063
 Rigidbody2D:
   serializedVersion: 5
@@ -1446,6 +1445,24 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.12895203, y: 0.19265684}
   m_EdgeRadius: 0
+--- !u!114 &1870048065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1870048058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 462fb9b8a84c323c6951f8bf61242064, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  speed: 5
+  canMoveDiagonally: 1
+  conviction: 3
+  moveAction: {fileID: 137275331}
+  spriteRenderer: {fileID: 1870048060}
+  anim: {fileID: 1870048059}
 --- !u!1 &2133655857
 GameObject:
   m_ObjectHideFlags: 0

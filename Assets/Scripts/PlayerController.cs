@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
     public float speed = 5f; // The speed at which the player moves
     public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
 
-    public float conviction = 1f;
+    public float conviction = 3f;
     private float contactTimer;
+    private float contactTimerLength = 0.5f;
     
     public InputActionReference moveAction;
     // Private variables 
@@ -33,6 +34,7 @@ public class PlayerController : MonoBehaviour
         // Prevent the player from rotating
         body.constraints = RigidbodyConstraints2D.FreezeRotation;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        Debug.Log("conviction= " + conviction );
     }
 
     void Update()
@@ -94,29 +96,46 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         NPCController npc = other.GetComponent<NPCController>();
-        if (npc && conviction < npc.conviction)
+        Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
+        if (npc && conviction <= npc.conviction)
         {
             anim.SetBool("isHurt", true);
             conviction -= 1;
             Debug.Log("conviction: " + conviction);
             contactTimer = 0f; // Reset timer on initial contact
         }
+        else if (npc && conviction > npc.conviction)
+        {
+            Debug.Log("Here");
+            npc.conviction -= 1;
+            npc.addConviction(-1);
+            contactTimer = 0f;
+        }
     }
 
     void OnTriggerStay2D(Collider2D other)
     {
         NPCController npc = other.GetComponent<NPCController>();
-        if (npc && conviction < npc.conviction)
+        contactTimer += Time.deltaTime;
+        Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
+        if (npc && conviction <= npc.conviction)
         {
-            contactTimer += Time.deltaTime;
             
-            if (contactTimer >= 0.5f)
+            if (contactTimer >= contactTimerLength)
             {
                 // Apply continuous damage/effect
                 conviction -= 1;
                 Debug.Log("Sustained damage! conviction: " + conviction);
                 
                 contactTimer = 0f; // Reset for next interval
+            }
+        }
+        else if (npc && conviction > npc.conviction)
+        {
+            if (contactTimer >= 0.5f)
+            {
+                contactTimer = 0f;
+                npc.conviction -= 1;
             }
         }
     }
