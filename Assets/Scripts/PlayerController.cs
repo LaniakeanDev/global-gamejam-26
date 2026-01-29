@@ -33,6 +33,8 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public int collectedMasks;
+
 
     private void OnEnable()
     {
@@ -109,7 +111,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other)
     {
         NPCController npc = other.GetComponent<NPCController>();
-        Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
+        // Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
         if (npc && conviction <= npc.conviction)
         {
             anim.SetBool("isHurt", true);
