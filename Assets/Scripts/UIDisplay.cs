@@ -13,6 +13,8 @@ public class UIDisplay : MonoBehaviour
     private VisualElement healthBar;
     private VisualElement masksUI;
 
+    private Label scoreUI;
+
 
     private float MAX_CONVICTION = 5f;
     private PlayerController playerController;
@@ -29,6 +31,7 @@ public class UIDisplay : MonoBehaviour
         playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         healthBar = uiDocument.rootVisualElement.Q<VisualElement>("HealthBar");
         masksUI = uiDocument.rootVisualElement.Q<VisualElement>("Masks");
+        scoreUI = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
         endText = uiDocument.rootVisualElement.Q<Label>("EndText");
         healthBar.style.width = Length.Percent(0.0f * 100.0f);
     }
@@ -46,6 +49,8 @@ public class UIDisplay : MonoBehaviour
                 endText.text = "";
             else
                 endText.text = "   ---TIME OUT---";
+        score = playerController.score;
+        scoreUI.text = "Score: " + score;
         playerConviction = playerController.conviction;
         collectedMasks = playerController.collectedMasks;
         float barFill_health = playerConviction / MAX_CONVICTION;
