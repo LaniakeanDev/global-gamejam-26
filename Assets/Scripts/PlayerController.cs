@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float conviction = 1f;
     private float contactTimer;
     private float CONTACT_TIMER_FREQ = 0.5f;
-    public float CONVICTION_GAIN = 0.05f;
+    public float CONVICTION_GAIN = 0.1f;
 
     private float CONVERSION_SCORE_GAIN = 0.1f;
     private float MASK_SCORE_GAIN = 10f;
