@@ -83,23 +83,23 @@ public class GameManager : MonoBehaviour
         timeOfDeath = Time.time;
     }
 
-    void timeout(int current_score)
+    public void timeout(int current_score)
     {
-        GameManager.state = State.Timeout;
-        timeoutDocument.gameObject.SetActive(true);
-        string readText = File.ReadAllText("scores.json");
-        Score score = Score.CreateFromJSON(readText);
-        if (current_score > score.scores[score.names.Count - 1])
-        {
-            if (score.names.Count >= 6 && current_score > score.scores[5])
-            {
-                var dict_score = new Dictionary<string, int>();
-                for (int i = 0; i < score.names.Count; i++)
-                    dict_score.Add(score.names[i], score.scores[i]);
-            }
-        }
-        timeOfDeath = Time.time;
-        setScoreDocument.gameObject.SetActive(true);
+        // GameManager.state = State.Timeout;
+        // timeoutDocument.gameObject.SetActive(true);
+        // string readText = File.ReadAllText("scores.json");
+        // Score score = Score.CreateFromJSON(readText);
+        // if (current_score > score.scores[score.names.Count - 1])
+        // {
+        //     if (score.names.Count >= 6 && current_score > score.scores[5])
+        //     {
+        //         var dict_score = new Dictionary<string, int>();
+        //         for (int i = 0; i < score.names.Count; i++)
+        //             dict_score.Add(score.names[i], score.scores[i]);
+        //     }
+        // }
+        // timeOfDeath = Time.time;
+        // setScoreDocument.gameObject.SetActive(true);
     }
 
     void pause()
