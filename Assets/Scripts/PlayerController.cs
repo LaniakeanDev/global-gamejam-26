@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
 
     public Animator anim;
     private bool isFacingRight = true;
+    private bool alreadyDead = false;
     private Animator animator;
     private bool IsDead
     {
@@ -67,8 +68,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (IsDead)
+        if (IsDead && !alreadyDead)
+        {
+            alreadyDead = true;
             gameManager.die();
+        }
+            
 
         anim.SetFloat("conviction", conviction);
         if (conviction <= 0)
