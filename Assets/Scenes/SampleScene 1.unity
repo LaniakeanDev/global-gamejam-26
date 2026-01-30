@@ -148,6 +148,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 9
 --- !u!1 &52670002 stripped
 GameObject:
@@ -178,6 +180,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 2
 --- !u!212 &106585359 stripped
 SpriteRenderer:
@@ -11463,6 +11467,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 10
 --- !u!1 &430249320 stripped
 GameObject:
@@ -11493,6 +11499,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 12
 --- !u!1 &480517365 stripped
 GameObject:
@@ -11523,6 +11531,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 1
 --- !u!1 &619394800
 GameObject:
@@ -11637,6 +11647,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 11
 --- !u!1 &808370990 stripped
 GameObject:
@@ -11667,6 +11679,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 8
 --- !u!1 &841918443
 GameObject:
@@ -36848,6 +36862,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 4
 --- !u!1 &1439488034 stripped
 GameObject:
@@ -36867,7 +36883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSpawner
   spawnRate: 1
-  maxQuantity: 10
+  MAX_SPAWN: 10
   counter: 0
   spawner_id: 0
 --- !u!1 &1464346642
@@ -36945,6 +36961,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 7
 --- !u!1 &1976642706 stripped
 GameObject:
@@ -36975,6 +36993,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 6
 --- !u!1 &2014114457 stripped
 GameObject:
@@ -37005,6 +37025,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 5
 --- !u!1 &2022456897 stripped
 GameObject:
@@ -37035,6 +37057,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 13
 --- !u!114 &2120613880
 MonoBehaviour:
@@ -37079,6 +37103,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 3
 --- !u!1001 &2999205212911144505
 PrefabInstance:
@@ -37219,7 +37245,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3452605426644986659, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
       propertyPath: conviction
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3452605426644986659, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
       propertyPath: moveAction

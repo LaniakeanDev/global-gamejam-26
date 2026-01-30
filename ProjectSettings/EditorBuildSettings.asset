@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SplashScene.unity
     guid: 94c659e2092cdaee3866c2da5ec29adc
+  - enabled: 0
+    path: Assets/Scenes/Remy2.unity
+    guid: 9e37d48b583e09adf9a27851a8283d61
+  - enabled: 0
+    path: Assets/Scenes/RemyScene.unity
+    guid: 490e0d44ea3e0954db39383b75876669
+  - enabled: 0
+    path: Assets/Scenes/SampleScene 1.unity
+    guid: 1c18ec8c7d7b225809189e9a8dc0e000
+  - enabled: 1
+    path: Assets/Scenes/ScoresScene.unity
+    guid: c1dcbdfba3276ff4eb8ed5834d9f43e3
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02

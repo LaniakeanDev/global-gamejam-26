@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     public int CONVICTION_GAIN = 1;
     public int PLAYER_CONVICTION_LOSS = 1;
 
+    public int CONVICTION_THRESHOLD_1;
+
     private int CONVERSION_SCORE_GAIN = 1;
     private int MASK_SCORE_GAIN = 10;
 
