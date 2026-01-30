@@ -64,7 +64,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -143,12 +143,12 @@ TextureImporter:
       name: Idle_2-Shee_black_0
       rect:
         serializedVersion: 2
-        x: 27
+        x: 0
         y: 0
-        width: 58
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.42965677, y: 0.25020042}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -165,12 +165,12 @@ TextureImporter:
       name: Idle_2-Shee_black_1
       rect:
         serializedVersion: 2
-        x: 156
+        x: 128
         y: 0
-        width: 39
-        height: 75
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.4306314, y: 0.24935772}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -187,12 +187,12 @@ TextureImporter:
       name: Idle_2-Shee_black_2
       rect:
         serializedVersion: 2
-        x: 278
+        x: 256
         y: 0
-        width: 60
-        height: 103
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.4303105, y: 0.24935772}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -209,12 +209,12 @@ TextureImporter:
       name: Idle_2-Shee_black_3
       rect:
         serializedVersion: 2
-        x: 408
+        x: 384
         y: 0
-        width: 42
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.43000817, y: 0.24968041}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: Idle_2-Shee_black_4
       rect:
         serializedVersion: 2
-        x: 532
+        x: 512
         y: 0
-        width: 45
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.43006802, y: 0.24969463}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -253,12 +253,12 @@ TextureImporter:
       name: Idle_2-Shee_black_5
       rect:
         serializedVersion: 2
-        x: 660
+        x: 640
         y: 0
-        width: 47
-        height: 77
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.43020344, y: 0.25066796}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -275,12 +275,12 @@ TextureImporter:
       name: Idle_2-Shee_black_6
       rect:
         serializedVersion: 2
-        x: 787
+        x: 768
         y: 0
-        width: 47
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.43104124, y: 0.24999999}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -297,12 +297,12 @@ TextureImporter:
       name: Idle_2-Shee_black_7
       rect:
         serializedVersion: 2
-        x: 916
+        x: 896
         y: 0
-        width: 45
-        height: 76
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 128
+        height: 128
+      alignment: 9
+      pivot: {x: 0.4268384, y: 0.24924578}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,55 +315,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Idle_2-Shee_black_8
-      rect:
-        serializedVersion: 2
-        x: 925
-        y: 73
-        width: 6
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4134374c845f1da00800000000000000
-      internalID: 779673903394145044
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Idle_2-Shee_black_9
-      rect:
-        serializedVersion: 2
-        x: 154
-        y: 55
-        width: 7
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d31564b34b2642500800000000000000
-      internalID: 370529595579322685
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bfe582c73fb7577819b4fe5a3adb2fbb
     internalID: 0
     vertices: []
     indices: 
@@ -371,7 +327,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":1.0},"gridSpriteSize":{"x":128.0,"y":128.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.25},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Idle_2-Shee_black_0: 4054659858929370148
       Idle_2-Shee_black_1: -3162074884394863148
@@ -381,8 +339,6 @@ TextureImporter:
       Idle_2-Shee_black_5: -4800224653635287020
       Idle_2-Shee_black_6: 6730911505815403519
       Idle_2-Shee_black_7: -5979147187267635947
-      Idle_2-Shee_black_8: 779673903394145044
-      Idle_2-Shee_black_9: 370529595579322685
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

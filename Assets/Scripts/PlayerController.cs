@@ -57,6 +57,9 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // Debug.Log("conviction= " + conviction );
         animator = GetComponent<Animator>();
+            anim.SetLayerWeight(1, 0);
+            anim.SetLayerWeight(0, 1);
+            anim.SetLayerWeight(2, 0);
     }
 
     void Update()
@@ -115,6 +118,18 @@ public class PlayerController : MonoBehaviour
         }
         anim.SetFloat("horizontal", horizontalInput);
         anim.SetFloat("vertical", verticalInput);
+        if (conviction >= 3)
+        {
+            anim.SetLayerWeight(1, 0);
+            anim.SetLayerWeight(0, 0);
+            anim.SetLayerWeight(2, 1);
+        }
+        else if (conviction >= 2)
+        {
+            anim.SetLayerWeight(1, 1);
+            anim.SetLayerWeight(0, 0);
+            anim.SetLayerWeight(2, 0);
+        }
         spriteRenderer.flipX = !isFacingRight;
     }
 
