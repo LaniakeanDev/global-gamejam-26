@@ -12,9 +12,10 @@ public class NPCController : MonoBehaviour
     private float wanderRadius = 500;
     private float wanderTimer = 0f;
     private const float WANDER_UPDATE_INTERVAL = 5f;
-    // private float INITIAL_CONVICTION = 5f;
+    private PlayerController playerController;
+    private int playerConviction;
 
-    public float conviction;
+    public int conviction;
 
     private float time = 0f; 
     private RandomSpawner script;
@@ -25,13 +26,18 @@ public class NPCController : MonoBehaviour
         GameObject spawner = GameObject.Find("Spawners");
         script = spawner.GetComponent<RandomSpawner>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
     }
     // Update is called once per frame
     private void Update()
     {
-        if (conviction <= 0)
+        playerConviction = playerController.conviction;
+        if (conviction <= playerConviction)
         {
             state = NPCState.Idle;
+        }
+        if (conviction <= 0)
+        {
             time = Time.time; 
             conviction = 0;
         }
@@ -75,10 +81,4 @@ public class NPCController : MonoBehaviour
             wanderTimer = 0f; // Reset timer
         }
     }
-
-
-    // public void addConviction(float convictionDelta)
-    // {
-    //     conviction += convictionDelta;
-    // }
 }

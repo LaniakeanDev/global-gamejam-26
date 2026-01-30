@@ -7,7 +7,6 @@ public class UIDisplay : MonoBehaviour
 
     public float initialTime = 130f;
 
-    public float CurrentHealth = 0.5f;
     private Label timeText;
     private Label endText;
     private VisualElement healthBar;
@@ -16,11 +15,12 @@ public class UIDisplay : MonoBehaviour
     private Label scoreUI;
 
 
-    private float MAX_CONVICTION = 5f;
+    private float MAX_CONVICTION = 100;
     private PlayerController playerController;
     private float playerConviction;
-    private float score;
+    private int score;
     private int collectedMasks;
+    private Label convictionValueUI;
 
     private UIDocument uiDocument;
 
@@ -32,6 +32,7 @@ public class UIDisplay : MonoBehaviour
         healthBar = uiDocument.rootVisualElement.Q<VisualElement>("HealthBar");
         masksUI = uiDocument.rootVisualElement.Q<VisualElement>("Masks");
         scoreUI = uiDocument.rootVisualElement.Q<Label>("ScoreLabel");
+        convictionValueUI = uiDocument.rootVisualElement.Q<Label>("ConvictionLabel");
         endText = uiDocument.rootVisualElement.Q<Label>("EndText");
         healthBar.style.width = Length.Percent(0.0f * 100.0f);
     }
@@ -52,12 +53,13 @@ public class UIDisplay : MonoBehaviour
         score = playerController.score;
         scoreUI.text = "Score: " + score;
         playerConviction = playerController.conviction;
-        if (playerConviction >= 3)
-            playerController.CONVICTION_GAIN = 0.3f;
-        else if(playerConviction >= 2 && playerConviction < 3)
-            playerController.CONVICTION_GAIN = 0.2f;
-        else if (playerConviction < 2)
-            playerController.CONVICTION_GAIN = 0.1f;
+        convictionValueUI.text = "" + playerConviction;
+        // if (playerConviction < 2)
+        //     playerController.CONVICTION_GAIN = 0.1f;
+        // else if(playerConviction >= 2 && playerConviction < 3)
+        //     playerController.CONVICTION_GAIN = 0.05f;
+        // else if (playerConviction >= 3)
+        //     playerController.CONVICTION_GAIN = 0.025f;
         collectedMasks = playerController.collectedMasks;
         float barFill_health = playerConviction / MAX_CONVICTION;
         healthBar.style.width = Length.Percent(barFill_health * 100f);

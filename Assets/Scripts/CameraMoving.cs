@@ -25,7 +25,7 @@ public class Follow_player : MonoBehaviour {
         abs_X = map.bounds.extents.x - camHoriz;
         abs_Y = map.bounds.extents.y - camVert;
         
-        Debug.Log($"Limites caméra: X={abs_X}, Y={abs_Y}");
+        // Debug.Log($"Limites caméra: X={abs_X}, Y={abs_Y}");
     }
 
     void Update() {
