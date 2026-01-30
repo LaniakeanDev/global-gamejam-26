@@ -117,13 +117,13 @@ public class GameManager : MonoBehaviour
     public void timeout(int current_score)
     {
         timeOfDeath = Time.time;
-        score_player = current_score + 1000;
+        score_player = current_score;
         GameManager.state = State.Timeout;
         timeoutDocument.gameObject.SetActive(true);
         timeoutLabel = timeoutDocument.rootVisualElement.Q<Label>("TimeoutText");
         string readText = File.ReadAllText("scores.json");
         Score score = Score.CreateFromJSON(readText);
-        if ((current_score > score.scores[score.names.Count - 1] && score.names.Count < 6)
+        if ((score.names.Count < 6)
         || (score.names.Count >= 6 && current_score > score.scores[5]))
         {
             timeoutLabel.text = "CONGRATS\nYOU MADE IT\nINTO HIGH SCORES !";
