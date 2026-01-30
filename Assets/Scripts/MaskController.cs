@@ -15,9 +15,18 @@ public class MaskController : MonoBehaviour
     
     private int spawnMasksCount = 0;
     private const int MAX_SPAWN_MASKS = 3;
+
+    private LayerChecker layerChecker;
     
     void Start()
     {
+        layerChecker = GetComponent<LayerChecker>();
+        if (layerChecker == null)
+        {
+            layerChecker = gameObject.AddComponent<LayerChecker>();
+        }
+        layerChecker.checkRadius = 0.5f;
+        layerChecker.targetLayer = LayerMask.GetMask("Wall");
         SpawnMask();
     }
     
@@ -38,7 +47,7 @@ public class MaskController : MonoBehaviour
             Random.Range(-width, width),
             Random.Range(-height, height)
         );
-        while (Vector2.Distance(playerPos2D, randomPosition) < 10)
+        while (Vector2.Distance(playerPos2D, randomPosition) < 10 || layerChecker.checkPosition(randomPosition))
         {
             randomPosition = new Vector2(
                 Random.Range(-width, width),
