@@ -5,7 +5,7 @@ public class UIDisplay : MonoBehaviour
 {
     private float elapsedTime = 0f;
 
-    public float initialTime = 130f;
+    public float initialTime = 60f;
 
     private Label timeText;
     private Label endText;
