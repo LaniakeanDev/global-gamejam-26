@@ -4,6 +4,7 @@ public class NPCController : MonoBehaviour
 {
     private Transform target;
     private SpriteRenderer spriteRenderer;
+    public int enemy_id;
     public float speed;
     public enum NPCState { Idle, Chasing }
     private NPCState state = NPCState.Chasing;

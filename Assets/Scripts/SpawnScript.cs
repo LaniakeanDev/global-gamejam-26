@@ -1,26 +1,29 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject Enemy;
+    // Préfab(s) à assigner dans l’Inspector
+    public GameObject[] witches;
+
     public int id;
+    private int rand;
 
     void Update()
     {
         RandomSpawner gen_rand = GetComponentInParent<RandomSpawner>();
-        if (gen_rand != null)
+
+        if (gen_rand != null && gen_rand.spawner_id == id)
         {
-            if (gen_rand.spawner_id == id){
-                SpawnEnemys();
-                gen_rand.spawner_id = 0;
-            }
-        } 
+            rand = Random.Range(0, witches.Length);
+            Debug.Log(rand);
+            SpawnEnemyAtIndex(rand);
+            gen_rand.spawner_id = 0;
+        }
     }
 
-    void SpawnEnemys()
+    void SpawnEnemyAtIndex(int index)
     {
-        Instantiate(Enemy, transform.position, transform.rotation);
+        Debug.Log(witches[index]);
+        Instantiate(witches[index], transform.position, transform.rotation);
     }
 }

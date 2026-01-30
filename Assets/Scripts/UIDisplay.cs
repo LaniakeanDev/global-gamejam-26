@@ -7,8 +7,6 @@ public class UIDisplay : MonoBehaviour
 
     public float initialTime = 130f;
 
-    public float initialTime = 130f;
-
     public float CurrentHealth = 0.5f;
     private Label timeText;
     private Label endText;

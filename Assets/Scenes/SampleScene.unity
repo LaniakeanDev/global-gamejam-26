@@ -136,7 +136,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 9
 --- !u!1 &52670002 stripped
 GameObject:
@@ -155,7 +158,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 2
 --- !u!212 &106585359 stripped
 SpriteRenderer:
@@ -179,7 +185,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 10
 --- !u!1 &430249320 stripped
 GameObject:
@@ -198,7 +207,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 12
 --- !u!1 &480517365 stripped
 GameObject:
@@ -217,7 +229,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 1
 --- !u!1 &619394800
 GameObject:
@@ -320,7 +335,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 11
 --- !u!1 &808370990 stripped
 GameObject:
@@ -339,7 +357,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 8
 --- !u!1 &1056798981 stripped
 GameObject:
@@ -358,7 +379,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 4
 --- !u!1 &1439488034 stripped
 GameObject:
@@ -377,8 +401,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26fceae59e2b44f4db5af28b0218cdc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSpawner
-  spawnRate: 3
-  maxQuantity: 5
+  spawnRate: 1
+  maxQuantity: 10
   counter: 0
   spawner_id: 0
 --- !u!1 &1536383163 stripped
@@ -398,7 +422,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 7
 --- !u!1 &1976642706 stripped
 GameObject:
@@ -417,7 +444,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 6
 --- !u!1 &2014114457 stripped
 GameObject:
@@ -436,7 +466,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 5
 --- !u!1 &2022456897 stripped
 GameObject:
@@ -455,7 +488,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 13
 --- !u!114 &2120613880
 MonoBehaviour:
@@ -488,7 +524,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7df592d22836461d9532bc8dfb77e08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
-  Enemy: {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  witches:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 3
 --- !u!1001 &2999205212911144505
 PrefabInstance:

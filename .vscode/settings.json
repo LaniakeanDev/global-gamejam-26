@@ -67,5 +67,5 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "global-gamejam-26.slnx"
+    "dotnet.defaultSolution": "KSAM.slnx"
 }
