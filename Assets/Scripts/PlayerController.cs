@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float conviction = 1f;
     private float contactTimer;
     private float CONTACT_TIMER_FREQ = 0.5f;
-    public float CONVICTION_GAIN = 0.1f;
+    public float CONVICTION_GAIN = 0f;
 
     private float CONVERSION_SCORE_GAIN = 0.1f;
     private float MASK_SCORE_GAIN = 10f;
@@ -56,6 +56,9 @@ public class PlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         // Debug.Log("conviction= " + conviction );
         animator = GetComponent<Animator>();
+            anim.SetLayerWeight(1, 0);
+            anim.SetLayerWeight(0, 1);
+            anim.SetLayerWeight(2, 0);
     }
 
     void Update()
@@ -112,6 +115,18 @@ public class PlayerController : MonoBehaviour
         }
         anim.SetFloat("horizontal", horizontalInput);
         anim.SetFloat("vertical", verticalInput);
+        if (conviction >= 3)
+        {
+            anim.SetLayerWeight(1, 0);
+            anim.SetLayerWeight(0, 0);
+            anim.SetLayerWeight(2, 1);
+        }
+        else if (conviction >= 2)
+        {
+            anim.SetLayerWeight(1, 1);
+            anim.SetLayerWeight(0, 0);
+            anim.SetLayerWeight(2, 0);
+        }
         spriteRenderer.flipX = !isFacingRight;
     }
 
