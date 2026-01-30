@@ -73,13 +73,13 @@ public class UISplash : MonoBehaviour
                 title.text = "- MAGIC ARRIVAL: SEEK ";
                 break;
             case 320:
-                title.text = "- MAGIC ARRIVAL: SEEK KNOW";
+                title.text = "- MAGIC ARRIVAL:\nSEEK KNOW";
                 break;
             case 330:
-                title.text = "- MAGIC ARRIVAL: SEEK KNOWLEDG";
+                title.text = "- MAGIC ARRIVAL:\nSEEK KNOWLEDG";
                 break;
             case 350:
-                title.text = "- MAGIC ARRIVAL: SEEK KNOWLEDGE -";
+                title.text = "- MAGIC ARRIVAL:\nSEEK KNOWLEDGE -";
                 break;
 
             default:
