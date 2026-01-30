@@ -43,43 +43,43 @@ public class UISplash : MonoBehaviour
         switch (count)
         {
             case 10:
-                title.text = "-T";
+                title.text = "M";
                 break;
             case 40:
-                title.text = "--";
+                title.text = "-";
                 break;
             case 90:
-                title.text = "-T";
+                title.text = "-M";
                 break;
             case 120:
-                title.text = "--TH";
+                title.text = "-MA";
                 break;
             case 170:
-                title.text = "---THE";
+                title.text = "--MAGIC";
                 break;
             case 200:
-                title.text = "----TH";
+                title.text = "--- MAGIC A";
                 break;
             case 230:
-                title.text = "----THE";
+                title.text = "---- MAGIC ARRI";
                 break;
             case 280:
-                title.text = "----THE ";
+                title.text = "---- MAGIC ARRI";
                 break;
             case 290:
-                title.text = "----THE G";
+                title.text = "- MAGIC ARRIVAL: S";
                 break;
             case 300:
-                title.text = "----THE GQ";
+                title.text = "- MAGIC ARRIVAL: SEEK ";
                 break;
             case 320:
-                title.text = "----THE GQM";
+                title.text = "- MAGIC ARRIVAL:\nSEEK KNOW";
                 break;
             case 330:
-                title.text = "----THE GQME";
+                title.text = "- MAGIC ARRIVAL:\nSEEK KNOWLEDG";
                 break;
             case 350:
-                title.text = "   ---- THE GQME ----";
+                title.text = "- MAGIC ARRIVAL:\nSEEK KNOWLEDGE -";
                 break;
 
             default:
