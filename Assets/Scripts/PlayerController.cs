@@ -71,7 +71,7 @@ public class PlayerController : MonoBehaviour
         if (IsDead && !alreadyDead)
         {
             alreadyDead = true;
-            gameManager.die();
+            GameManager.instance.die();
         }
             
 

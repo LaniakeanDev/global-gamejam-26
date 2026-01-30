@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
     public void timeout(int current_score)
     {
         timeOfDeath = Time.time;
-        score_player = current_score;
+        score_player = current_score + 1000;
         GameManager.state = State.Timeout;
         timeoutDocument.gameObject.SetActive(true);
         timeoutLabel = timeoutDocument.rootVisualElement.Q<Label>("TimeoutText");
