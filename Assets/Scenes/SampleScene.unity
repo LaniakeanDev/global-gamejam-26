@@ -548,6 +548,7 @@ MonoBehaviour:
   timeoutDocument: {fileID: 2115572130}
   deathDocument: {fileID: 2046016375}
   setScoreDocument: {fileID: 1693391594}
+  score_player: 0
 --- !u!1 &1439488034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2067616501714966840, guid: 6fa425622c7c6bedb994b08dc516b852, type: 3}
@@ -647,7 +648,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
   m_PanelSettings: {fileID: 11400000, guid: 466f009f3e90e5e1988be0717023ce6b, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: b02a48c99ccf6be35a9e2fd4b5b7acb6, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: d346bd85036134b869197c1d1b3ecd82, type: 3}
   m_SortingOrder: 5
   m_Position: 0
   m_WorldSpaceSizeMode: 1
@@ -908,7 +909,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
   m_PanelSettings: {fileID: 11400000, guid: 466f009f3e90e5e1988be0717023ce6b, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: b02a48c99ccf6be35a9e2fd4b5b7acb6, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: f3f36701b296a07588e4a9b06d011744, type: 3}
   m_SortingOrder: 4
   m_Position: 0
   m_WorldSpaceSizeMode: 1

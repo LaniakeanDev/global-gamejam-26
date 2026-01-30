@@ -15,6 +15,8 @@ public enum State
     Pause,
     Timeout,
 
+    Scoring,
+
     Dead
 }
 
@@ -32,7 +34,16 @@ public class GameManager : MonoBehaviour
     public UIDocument setScoreDocument;
     private Button leaveButton;
     private Button resumeButton;
+
+    public TextField scoreField;
+    public Label timeoutLabel;
     private InputAction cancel_action;
+    private InputAction validate_action;
+
+    public Dictionary<string, int> dict_score = new Dictionary<string, int>();
+
+    public int score_player;
+
 
 
     private float timeOfDeath;
@@ -42,8 +53,10 @@ public class GameManager : MonoBehaviour
     {
         instance = this;
         cancel_action = InputSystem.actions.FindAction("Cancel");
+        validate_action = InputSystem.actions.FindAction("Submit");
         state = State.Play;
         setButtons();
+        timeoutLabel = pauseDocument.rootVisualElement.Q<Label>("TimeoutText");
         pauseDocument.gameObject.SetActive(false);
         timeoutDocument.gameObject.SetActive(false);
         deathDocument.gameObject.SetActive(false);
@@ -62,7 +75,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if ((GameManager.state == State.Dead || GameManager.state == State.Timeout) && Time.time > timeOfDeath + 2f)
+        if ((GameManager.state == State.Dead || GameManager.state == State.Timeout) && Time.time > timeOfDeath + 3f)
         {
             SceneManager.LoadScene("Scenes/SplashScene");
         }
@@ -71,35 +84,64 @@ public class GameManager : MonoBehaviour
             if (GameManager.state == State.Pause)
                 resume();
             else if (GameManager.state == State.Play)
-                die();
+                timeout(1110);
+            else if (GameManager.state == State.Scoring)
+            {
+                Debug.Log(scoreField.value);
+                validate_name();
+            }
         }
+        if (validate_action.WasPressedThisFrame())
+            validate_name();
+    }
 
+    void validate_name()
+    {
+        dict_score.Add(scoreField.value, score_player);
+        Score score = new Score();
+        score.SaveToJson(dict_score);
+        Time.timeScale = 1;
+        SceneManager.LoadScene("Scenes/ScoresScene");
     }
 
     public void die()
     {
-        deathDocument.gameObject.SetActive(true);
-        GameManager.state = State.Dead;
-        timeOfDeath = Time.time;
+        if (GameManager.state == State.Play)
+        {
+            deathDocument.gameObject.SetActive(true);
+            GameManager.state = State.Dead;
+            timeOfDeath = Time.time + 1f;
+        }
     }
 
     public void timeout(int current_score)
     {
-        // GameManager.state = State.Timeout;
-        // timeoutDocument.gameObject.SetActive(true);
-        // string readText = File.ReadAllText("scores.json");
-        // Score score = Score.CreateFromJSON(readText);
-        // if (current_score > score.scores[score.names.Count - 1])
-        // {
-        //     if (score.names.Count >= 6 && current_score > score.scores[5])
-        //     {
-        //         var dict_score = new Dictionary<string, int>();
-        //         for (int i = 0; i < score.names.Count; i++)
-        //             dict_score.Add(score.names[i], score.scores[i]);
-        //     }
-        // }
-        // timeOfDeath = Time.time;
-        // setScoreDocument.gameObject.SetActive(true);
+        timeOfDeath = Time.time;
+        score_player = current_score + 1000000;
+        GameManager.state = State.Timeout;
+        timeoutDocument.gameObject.SetActive(true);
+        timeoutLabel = timeoutDocument.rootVisualElement.Q<Label>("TimeoutText");
+        string readText = File.ReadAllText("scores.json");
+        Score score = Score.CreateFromJSON(readText);
+        if ((current_score > score.scores[score.names.Count - 1] && score.names.Count < 6)
+        || (score.names.Count >= 6 && current_score > score.scores[5]))
+        {
+            timeoutLabel.text = "CONGRATS\nYOU MADE IT\nINTO HIGH SCORES !";
+            GameManager.state = State.Scoring;
+            Time.timeScale = 0;
+            setScoreDocument.gameObject.SetActive(true);
+            scoreField = setScoreDocument.rootVisualElement.Q<TextField>("ScoreField");
+            dict_score = new Dictionary<string, int>();
+            for (int i = 0; i < score.names.Count; i++)
+                dict_score.Add(score.names[i], score.scores[i]);
+            setScoreDocument.gameObject.SetActive(true);
+
+        }
+        else
+        {
+            timeoutLabel.text = "UNFORTUNATELY YOU\nDID NOT MAKE IT\nINTO HIGH SCORES";
+        }
+
     }
 
     void pause()
