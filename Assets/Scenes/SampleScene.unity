@@ -148,6 +148,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 9
 --- !u!1 &52670002 stripped
 GameObject:
@@ -178,6 +180,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 2
 --- !u!212 &106585359 stripped
 SpriteRenderer:
@@ -213,6 +217,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 10
 --- !u!1 &430249320 stripped
 GameObject:
@@ -243,6 +249,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 12
 --- !u!1 &480517365 stripped
 GameObject:
@@ -273,6 +281,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 1
 --- !u!1 &519901226
 GameObject:
@@ -306,6 +316,8 @@ Transform:
   - {fileID: 1240433082}
   - {fileID: 1755827827}
   - {fileID: 2046016374}
+  - {fileID: 2115572129}
+  - {fileID: 1693391593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &619394800
@@ -421,6 +433,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 11
 --- !u!1 &808370990 stripped
 GameObject:
@@ -451,6 +465,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 8
 --- !u!1 &1056798981 stripped
 GameObject:
@@ -481,6 +497,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 4
 --- !u!1 &1240433080
 GameObject:
@@ -527,7 +545,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   pauseDocument: {fileID: 1755827826}
+  timeoutDocument: {fileID: 2115572130}
   deathDocument: {fileID: 2046016375}
+  setScoreDocument: {fileID: 1693391594}
 --- !u!1 &1439488034 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2067616501714966840, guid: 6fa425622c7c6bedb994b08dc516b852, type: 3}
@@ -546,7 +566,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RandomSpawner
   spawnRate: 1
-  maxQuantity: 10
+  MAX_SPAWN: 10
   counter: 0
   spawner_id: 0
 --- !u!1 &1536383163 stripped
@@ -578,7 +598,64 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 7
+--- !u!1 &1693391592
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1693391593}
+  - component: {fileID: 1693391594}
+  m_Layer: 5
+  m_Name: setscoreDocument
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1693391593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693391592}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519901227}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1693391594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1693391592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 466f009f3e90e5e1988be0717023ce6b, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: b02a48c99ccf6be35a9e2fd4b5b7acb6, type: 3}
+  m_SortingOrder: 5
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
 --- !u!1 &1755827825
 GameObject:
   m_ObjectHideFlags: 0
@@ -663,6 +740,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 6
 --- !u!1 &2014114457 stripped
 GameObject:
@@ -693,6 +772,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 5
 --- !u!1 &2022456897 stripped
 GameObject:
@@ -723,6 +804,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 13
 --- !u!1 &2046016373
 GameObject:
@@ -779,6 +862,61 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
+--- !u!1 &2115572128
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2115572129}
+  - component: {fileID: 2115572130}
+  m_Layer: 5
+  m_Name: timeoutDocument
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2115572129
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115572128}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 519901227}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2115572130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115572128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 19102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
+  m_PanelSettings: {fileID: 11400000, guid: 466f009f3e90e5e1988be0717023ce6b, type: 2}
+  m_ParentUI: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: b02a48c99ccf6be35a9e2fd4b5b7acb6, type: 3}
+  m_SortingOrder: 4
+  m_Position: 0
+  m_WorldSpaceSizeMode: 1
+  m_WorldSpaceWidth: 1920
+  m_WorldSpaceHeight: 1080
+  m_PivotReferenceSize: 0
+  m_Pivot: 0
+  m_WorldSpaceCollider: {fileID: 0}
 --- !u!114 &2120613880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -822,6 +960,8 @@ MonoBehaviour:
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  CONVICTION_THRESHOLD_1: 20
+  CONVICTION_THRESHOLD_2: 60
   id: 3
 --- !u!1001 &2999205212911144505
 PrefabInstance:

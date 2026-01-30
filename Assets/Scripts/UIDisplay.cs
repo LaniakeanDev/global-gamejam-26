@@ -42,14 +42,9 @@ public class UIDisplay : MonoBehaviour
         elapsedTime += Time.deltaTime;
         float timeToDisplay = initialTime - elapsedTime;
         if (timeToDisplay < 0)
-            timeText.text = "Time out";
+            GameManager.instance.timeout(playerController.score);
         else
             timeText.text = minutes(timeToDisplay) + seconds(timeToDisplay);
-        if (timeToDisplay < 0)
-            if (Mathf.FloorToInt(-timeToDisplay) % 4 == 3)
-                endText.text = "";
-            else
-                endText.text = "   ---TIME OUT---";
         score = playerController.score;
         scoreUI.text = "Score: " + score;
         playerConviction = playerController.conviction;
