@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
             if (GameManager.state == State.Pause)
                 resume();
             else if (GameManager.state == State.Play)
-                timeout(1110);
+                pause();
             else if (GameManager.state == State.Scoring)
             {
                 Debug.Log(scoreField.value);
@@ -117,7 +117,7 @@ public class GameManager : MonoBehaviour
     public void timeout(int current_score)
     {
         timeOfDeath = Time.time;
-        score_player = current_score + 1000000;
+        score_player = current_score;
         GameManager.state = State.Timeout;
         timeoutDocument.gameObject.SetActive(true);
         timeoutLabel = timeoutDocument.rootVisualElement.Q<Label>("TimeoutText");

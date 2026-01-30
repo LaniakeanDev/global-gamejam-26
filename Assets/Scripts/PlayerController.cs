@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
             anim.SetLayerWeight(1, 0);
             anim.SetLayerWeight(0, 1);
             anim.SetLayerWeight(2, 0);
-        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+        gameManager = GameManager.instance;
     }
 
     void Update()
