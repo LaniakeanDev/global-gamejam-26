@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private float MASK_SCORE_GAIN = 10f;
 
     public float score = 0f;
+
     
     public InputActionReference moveAction;
     // Private variables 
