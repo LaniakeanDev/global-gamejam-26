@@ -14,7 +14,8 @@ public class PlayerController : MonoBehaviour
     public int CONVICTION_GAIN = 1;
     public int PLAYER_CONVICTION_LOSS = 1;
 
-    public int CONVICTION_THRESHOLD_1;
+    public int CONVICTION_THRESHOLD_1 = 55;
+    public int CONVICTION_THRESHOLD_2 = 90;
 
     private int CONVERSION_SCORE_GAIN = 1;
     private int MASK_SCORE_GAIN = 10;
@@ -131,13 +132,13 @@ public class PlayerController : MonoBehaviour
         }
         anim.SetFloat("horizontal", horizontalInput);
         anim.SetFloat("vertical", verticalInput);
-        if (conviction >= 3)
+        if (conviction >= CONVICTION_THRESHOLD_2)
         {
             anim.SetLayerWeight(1, 0);
             anim.SetLayerWeight(0, 0);
             anim.SetLayerWeight(2, 1);
         }
-        else if (conviction >= 2)
+        else if (conviction >= CONVICTION_THRESHOLD_1)
         {
             anim.SetLayerWeight(1, 1);
             anim.SetLayerWeight(0, 0);
