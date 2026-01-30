@@ -6,7 +6,7 @@ public class NPCController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     public float speed;
     public enum NPCState { Idle, Chasing }
-    public NPCState state;
+    private NPCState state = NPCState.Chasing;
     private Vector2 wanderTarget;
     private float wanderRadius = 500;
     private float wanderTimer = 0f;
@@ -22,7 +22,6 @@ public class NPCController : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        Debug.Log("NPC conviction: " + conviction);
         if (conviction <= 0)
         {
             state = NPCState.Idle;

@@ -17,6 +17,8 @@ public class UIDisplay : MonoBehaviour
     private float MAX_CONVICTION = 5f;
     private PlayerController playerController;
     private float playerConviction;
+    private float score;
+    private int collectedMasks;
 
     private UIDocument uiDocument;
 
@@ -45,10 +47,10 @@ public class UIDisplay : MonoBehaviour
             else
                 endText.text = "   ---TIME OUT---";
         playerConviction = playerController.conviction;
+        collectedMasks = playerController.collectedMasks;
         float barFill_health = playerConviction / MAX_CONVICTION;
         healthBar.style.width = Length.Percent(barFill_health * 100f);
-        float barFill_masks = elapsedTime / 10f;
-        masks.style.width = Length.Percent(barFill_masks * 100f);
+        masksUI.style.width = collectedMasks * 40;
 
     }
 
