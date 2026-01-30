@@ -11,7 +11,7 @@ public class UIDisplay : MonoBehaviour
     private Label timeText;
     private Label endText;
     private VisualElement healthBar;
-    private VisualElement masks;
+    private VisualElement masksUI;
 
 
     private float MAX_CONVICTION = 5f;
@@ -28,7 +28,7 @@ public class UIDisplay : MonoBehaviour
         timeText = uiDocument.rootVisualElement.Q<Label>("TimeLabel");
         playerController = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
         healthBar = uiDocument.rootVisualElement.Q<VisualElement>("HealthBar");
-        masks = uiDocument.rootVisualElement.Q<VisualElement>("Masks");
+        masksUI = uiDocument.rootVisualElement.Q<VisualElement>("Masks");
         endText = uiDocument.rootVisualElement.Q<Label>("EndText");
         healthBar.style.width = Length.Percent(0.0f * 100.0f);
     }
