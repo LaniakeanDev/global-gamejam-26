@@ -5,7 +5,7 @@ public class UIDisplay : MonoBehaviour
 {
     private float elapsedTime = 0f;
 
-    public float CurrentHealth = 0.5f;
+    public float CurrentHealth = 1.5f;
     private Label timeText;
     private Label scoreUI;
     private VisualElement healthBar;

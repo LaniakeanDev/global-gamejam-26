@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     public float SPEED = 5f; // The SPEED at which the player moves
     public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
 
-    public float conviction = 4f;
+    public float conviction = 1f;
     private float contactTimer;
     private float CONTACT_TIMER_FREQ = 0.5f;
     private float CONVICTION_GAIN = 0.5f;
@@ -118,13 +118,13 @@ public class PlayerController : MonoBehaviour
     {
         NPCController npc = other.GetComponent<NPCController>();
         // Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
-        if (npc && conviction <= npc.conviction)
+        if (npc && conviction < npc.conviction)
         {
             anim.SetBool("isHurt", true);
             conviction -= 1;
             contactTimer = 0f; // Reset timer on initial contact
         }
-        else if (npc && npc.conviction > 0 && conviction > npc.conviction)
+        else if (npc && npc.conviction > 0 && conviction >= npc.conviction)
         {
             npc.conviction -= 1;
             contactTimer = 0f;
@@ -138,7 +138,7 @@ public class PlayerController : MonoBehaviour
         NPCController npc = other.GetComponent<NPCController>();
         contactTimer += Time.deltaTime;
         // Debug.Log("conviction= " + conviction + ", npc.conviction= " + npc.conviction);
-        if (npc && conviction <= npc.conviction)
+        if (npc && conviction < npc.conviction)
         {
             
             if (contactTimer >= CONTACT_TIMER_FREQ)
@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
                 contactTimer = 0f; // Reset for next interval
             }
         }
-        else if (npc && npc.conviction > 0 && conviction > npc.conviction)
+        else if (npc && npc.conviction > 0 && conviction >= npc.conviction)
         {
             if (contactTimer >= 0.5f)
             {
