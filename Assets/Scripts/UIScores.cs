@@ -17,6 +17,8 @@ public class UIScores : MonoBehaviour
         UIDocument uiDocument = GetComponent<UIDocument>();
         for (int i = 0; i < score.names.Count; i++)
         {
+            if (i == 6)
+                break;
             score_labels[i] = uiDocument.rootVisualElement.Q<Label>("Score" + (i + 1));
             score_labels[i].text = score.names[i] + "  :  ";
             score_labels[i].text += score.scores[i];
