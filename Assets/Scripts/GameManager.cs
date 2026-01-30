@@ -4,6 +4,8 @@ using System;
 using System.IO;
 using UnityEngine.SceneManagement;
 using UnityEngine.InputSystem;
+using System.Linq;
+using System.Collections.Generic;
 
 
 public enum State
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
 
     public UIDocument timeoutDocument;
     public UIDocument deathDocument;
+    public UIDocument setScoreDocument;
     private Button leaveButton;
     private Button resumeButton;
     private InputAction cancel_action;
@@ -44,6 +47,7 @@ public class GameManager : MonoBehaviour
         pauseDocument.gameObject.SetActive(false);
         timeoutDocument.gameObject.SetActive(false);
         deathDocument.gameObject.SetActive(false);
+        setScoreDocument.gameObject.SetActive(false);
     }
 
     void setButtons()
@@ -58,7 +62,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if (GameManager.state == State.Dead && Time.time > timeOfDeath + 3f)
+        if ((GameManager.state == State.Dead || GameManager.state == State.Timeout) && Time.time > timeOfDeath + 2f)
         {
             SceneManager.LoadScene("Scenes/SplashScene");
         }
@@ -67,25 +71,35 @@ public class GameManager : MonoBehaviour
             if (GameManager.state == State.Pause)
                 resume();
             else if (GameManager.state == State.Play)
-                pause();
+                die();
         }
 
     }
 
-    void die()
+    public void die()
     {
         deathDocument.gameObject.SetActive(true);
         GameManager.state = State.Dead;
         timeOfDeath = Time.time;
     }
 
-    void timeout()
+    void timeout(int current_score)
     {
         GameManager.state = State.Timeout;
+        timeoutDocument.gameObject.SetActive(true);
         string readText = File.ReadAllText("scores.json");
         Score score = Score.CreateFromJSON(readText);
-        // score.SaveToJson(scores_dict);
-
+        if (current_score > score.scores[score.names.Count - 1])
+        {
+            if (score.names.Count >= 6 && current_score > score.scores[5])
+            {
+                var dict_score = new Dictionary<string, int>();
+                for (int i = 0; i < score.names.Count; i++)
+                    dict_score.Add(score.names[i], score.scores[i]);
+            }
+        }
+        timeOfDeath = Time.time;
+        setScoreDocument.gameObject.SetActive(true);
     }
 
     void pause()
