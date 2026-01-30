@@ -26,6 +26,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 movement; // Stores the direction of player movement
     private bool isMovingHorizontally = true; // Flag to track if the player is moving horizontally
 
+    private GameManager gameManager;
+
     public SpriteRenderer spriteRenderer;
 
     public Animator anim;
@@ -60,10 +62,14 @@ public class PlayerController : MonoBehaviour
             anim.SetLayerWeight(1, 0);
             anim.SetLayerWeight(0, 1);
             anim.SetLayerWeight(2, 0);
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     void Update()
     {
+        if (IsDead)
+            gameManager.die();
+
         anim.SetFloat("conviction", conviction);
         if (conviction <= 0)
         {
