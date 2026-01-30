@@ -3,6 +3,7 @@ using UnityEngine.UIElements;
 using System;
 using System.IO;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 
 public enum State
@@ -20,10 +21,15 @@ public class GameManager : MonoBehaviour
 {
 
     public static State state = State.Starting;
+
+    public static GameManager instance;
     public UIDocument pauseDocument;
+
+    public UIDocument timeoutDocument;
     public UIDocument deathDocument;
     private Button leaveButton;
     private Button resumeButton;
+    private InputAction cancel_action;
 
 
     private float timeOfDeath;
@@ -31,9 +37,12 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        state = State.Starting;
+        instance = this;
+        cancel_action = InputSystem.actions.FindAction("Cancel");
+        state = State.Play;
         setButtons();
         pauseDocument.gameObject.SetActive(false);
+        timeoutDocument.gameObject.SetActive(false);
         deathDocument.gameObject.SetActive(false);
     }
 
@@ -49,14 +58,16 @@ public class GameManager : MonoBehaviour
     void Update()
     {
 
-        if (GameManager.state == State.Starting && Time.time > 1)
-        {
-            GameManager.state = State.Play;
-            pause();
-        }
         if (GameManager.state == State.Dead && Time.time > timeOfDeath + 3f)
         {
             SceneManager.LoadScene("Scenes/SplashScene");
+        }
+        if (cancel_action.WasPressedThisFrame())
+        {
+            if (GameManager.state == State.Pause)
+                resume();
+            else if (GameManager.state == State.Play)
+                pause();
         }
 
     }
@@ -68,6 +79,15 @@ public class GameManager : MonoBehaviour
         timeOfDeath = Time.time;
     }
 
+    void timeout()
+    {
+        GameManager.state = State.Timeout;
+        string readText = File.ReadAllText("scores.json");
+        Score score = Score.CreateFromJSON(readText);
+        // score.SaveToJson(scores_dict);
+
+    }
+
     void pause()
     {
         if (GameManager.state == State.Play)
@@ -77,7 +97,6 @@ public class GameManager : MonoBehaviour
             Time.timeScale = 0;
             GameManager.state = State.Pause;
         }
-
     }
 
     void abandon()

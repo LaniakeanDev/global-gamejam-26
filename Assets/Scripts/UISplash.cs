@@ -8,32 +8,7 @@ using System.Linq;
 
 
 
-[Serializable]
-public class Score
-{
-    public List<string> names;
-    public List<int> scores;
 
-    public static Score CreateFromJSON(string jsonString)
-    {
-        return JsonUtility.FromJson<Score>(jsonString);
-    }
-
-    public void SaveToJson(Dictionary<string, int> dict)
-    // public void SaveToPlayerPrefs(List<string> _names, List<int> _scores)
-    {
-        names = dict
-            .OrderByDescending(kvp => kvp.Value)
-            .Select(kvp => kvp.Key)
-            .ToList();
-        scores = dict
-            .OrderByDescending(kvp => kvp.Value)
-            .Select(kvp => kvp.Value)
-            .ToList();
-        string json = JsonUtility.ToJson(this);
-        File.WriteAllText("scores.json", json);
-    }
-}
 
 public class UISplash : MonoBehaviour
 {
@@ -59,15 +34,6 @@ public class UISplash : MonoBehaviour
         startButton.clicked += startAction;
         scoreButton.clicked += scoreAction;
 
-        var score = new Score();
-        // scores.SaveToPlayerPrefs(new List<string> { "Bob", "Jean-Bob"}, new List<int> { 50, 100});
-        var scores_dict = new Dictionary<string, int>();
-        scores_dict.Add("Jean", 40);
-        scores_dict.Add("Bob", 400);
-        score.SaveToJson(scores_dict);
-
-        // string json_txt = JsonUtility.ToJson(scores_dict);
-        // File.WriteAllText("scores.json", json_txt);
 
     }
 
