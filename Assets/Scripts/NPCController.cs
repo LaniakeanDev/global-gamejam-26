@@ -49,12 +49,16 @@ public class NPCController : MonoBehaviour
         if (time != 0)
         {
             time += Time.deltaTime;
-            if (time >= 3 && distance > 10){
+            if (time >= 3 && distance > 10 || distance > 10){
                 Destroy(gameObject);
                 script.counter--;
             }
             else if (distance < 10)
                 time = Time.time;
+        }
+        else if (distance > 15){
+                Destroy(gameObject);
+                script.counter--;
         }
 
 

@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float conviction = 1f;
     private float contactTimer;
     private float CONTACT_TIMER_FREQ = 0.5f;
-    private float CONVICTION_GAIN = 0.5f;
+    public float CONVICTION_GAIN = 0.05f;
 
     private float CONVERSION_SCORE_GAIN = 0.1f;
     private float MASK_SCORE_GAIN = 10f;
@@ -61,6 +61,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         anim.SetFloat("conviction", conviction);
+        if (conviction <= 0)
+        {
+            body.constraints |= RigidbodyConstraints2D.FreezePositionX;
+            body.constraints |= RigidbodyConstraints2D.FreezePositionY;
+        }
+            
         // Get player input from keyboard or controller
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
         

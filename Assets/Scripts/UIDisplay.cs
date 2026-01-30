@@ -52,6 +52,12 @@ public class UIDisplay : MonoBehaviour
         score = playerController.score;
         scoreUI.text = "Score: " + score;
         playerConviction = playerController.conviction;
+        if (playerConviction < 2)
+            playerController.CONVICTION_GAIN = 0.05f;
+        else if(playerConviction >= 2 && playerConviction < 3)
+            playerController.CONVICTION_GAIN = 0.02f;
+        else if (playerConviction >= 3)
+            playerController.CONVICTION_GAIN = 0.01f;
         collectedMasks = playerController.collectedMasks;
         float barFill_health = playerConviction / MAX_CONVICTION;
         healthBar.style.width = Length.Percent(barFill_health * 100f);

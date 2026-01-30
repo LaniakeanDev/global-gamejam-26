@@ -138,7 +138,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 9
 --- !u!1 &52670002 stripped
@@ -160,7 +168,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 2
 --- !u!212 &106585359 stripped
@@ -187,7 +203,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 10
 --- !u!1 &430249320 stripped
@@ -209,7 +233,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 12
 --- !u!1 &480517365 stripped
@@ -231,7 +263,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 1
 --- !u!1 &619394800
@@ -337,7 +377,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 11
 --- !u!1 &808370990 stripped
@@ -359,7 +407,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 8
 --- !u!1 &1056798981 stripped
@@ -381,7 +437,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 4
 --- !u!1 &1439488034 stripped
@@ -424,7 +488,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 7
 --- !u!1 &1976642706 stripped
@@ -446,7 +518,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 6
 --- !u!1 &2014114457 stripped
@@ -468,7 +548,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 5
 --- !u!1 &2022456897 stripped
@@ -490,7 +578,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 13
 --- !u!114 &2120613880
@@ -526,7 +622,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::SpawnEnemy
   witches:
   - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
   - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  witches2:
+  - {fileID: 5237374533113267686, guid: 5e224067ca9263f61b6a8dfe74377198, type: 3}
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
+  witches3:
+  - {fileID: 8037121297081159249, guid: 8262073476681688198a6df83569c38c, type: 3}
+  - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   - {fileID: 8037121297081159249, guid: 0968891deddfa6c25a2839c51a825765, type: 3}
   id: 3
 --- !u!1001 &2999205212911144505
@@ -581,6 +685,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3468300660511674439, guid: 4fe9ffed1ae4796ff993a21ccb8bbf67, type: 3}
+      propertyPath: m_Size.x
+      value: 20.167213
+      objectReference: {fileID: 0}
+    - target: {fileID: 3468300660511674439, guid: 4fe9ffed1ae4796ff993a21ccb8bbf67, type: 3}
+      propertyPath: m_Size.y
+      value: 19.87459
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -594,6 +706,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1667447552916380615, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2337313215856533869, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -640,12 +756,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3452605426644986659, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
       propertyPath: conviction
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3452605426644986659, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
       propertyPath: moveAction
       value: 
       objectReference: {fileID: 2120613880}
+    - target: {fileID: 6194551712325384148, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194551712325384148, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6194551712325384148, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8585890512989879418, guid: 2b38c08b840104591aa2e2a578d9400a, type: 3}
       propertyPath: m_Name
       value: Relanna
