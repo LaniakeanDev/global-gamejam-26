@@ -28,8 +28,8 @@ public class MaskController : MonoBehaviour
 
     Vector2 getRandomPosition()
     {
-        float width = GameObject.Find("Map").GetComponent<SpriteRenderer>().bounds.size.x / 2;
-        float height = GameObject.Find("Map").GetComponent<SpriteRenderer>().bounds.size.y / 2;
+        float width = GameObject.Find("Map").GetComponent<SpriteRenderer>().bounds.size.x * 0.45f;
+        float height = GameObject.Find("Map").GetComponent<SpriteRenderer>().bounds.size.y * 0.45f;
         // Transform playerTransform = GameObject.FindWithTag("Player").transform;
         // Vector3 playerPosition = playerTransform.position;
         Vector3 playerPosition = GameObject.FindWithTag("Player").transform.position;

@@ -267,7 +267,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
   enemy_id: 1
   speed: 2
-  conviction: 1
+  conviction: 25
 --- !u!61 &-5160131466691786565
 BoxCollider2D:
   m_ObjectHideFlags: 0

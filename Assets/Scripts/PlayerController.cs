@@ -8,15 +8,16 @@ public class PlayerController : MonoBehaviour
     public float SPEED = 5f; // The SPEED at which the player moves
     public bool canMoveDiagonally = true; // Controls whether the player can move diagonally
 
-    public float conviction = 1f;
+    public int conviction = 50;
     private float contactTimer;
     private float CONTACT_TIMER_FREQ = 0.5f;
-    public float CONVICTION_GAIN = 0.1f;
+    public int CONVICTION_GAIN = 1;
+    public int PLAYER_CONVICTION_LOSS = 1;
 
-    private float CONVERSION_SCORE_GAIN = 0.1f;
-    private float MASK_SCORE_GAIN = 10f;
+    private int CONVERSION_SCORE_GAIN = 1;
+    private int MASK_SCORE_GAIN = 10;
 
-    public float score = 0f;
+    public int score = 0;
 
     
     public InputActionReference moveAction;
@@ -66,6 +67,8 @@ public class PlayerController : MonoBehaviour
             body.constraints |= RigidbodyConstraints2D.FreezePositionX;
             body.constraints |= RigidbodyConstraints2D.FreezePositionY;
         }
+        else if (conviction > 100)
+            conviction = 100;
             
         // Get player input from keyboard or controller
         Vector2 moveInput = moveAction.action.ReadValue<Vector2>();
@@ -127,7 +130,7 @@ public class PlayerController : MonoBehaviour
         if (npc && conviction < npc.conviction)
         {
             anim.SetBool("isHurt", true);
-            conviction -= 1;
+            conviction -= PLAYER_CONVICTION_LOSS;
             contactTimer = 0f; // Reset timer on initial contact
         }
         else if (npc && npc.conviction > 0 && conviction >= npc.conviction)
@@ -150,7 +153,7 @@ public class PlayerController : MonoBehaviour
             if (contactTimer >= CONTACT_TIMER_FREQ)
             {
                 // Apply continuous damage/effect
-                conviction -= 1;                
+                conviction -= PLAYER_CONVICTION_LOSS;                
                 contactTimer = 0f; // Reset for next interval
             }
         }

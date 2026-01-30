@@ -251,4 +251,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NPCController
   enemy_id: 3
   speed: 2
-  conviction: 3
+  conviction: 80
